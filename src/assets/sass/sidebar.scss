@@ -1,0 +1,26 @@
+@import './colors.scss';
+
+.sidebar {
+	position: absolute;
+	display: flex;
+	padding-top: 1rem;
+	width: 200px;
+	flex-direction: column;
+
+	span {
+		display: flex;
+		align-items: center;
+		border-radius: 5px;
+		padding: .5rem 1rem;
+		margin-left: 5px;
+
+		&:hover {
+			background: $background2;
+			transition: .3s;
+		}
+	}
+
+	a {
+		font-size: 1.2rem;
+	}
+}

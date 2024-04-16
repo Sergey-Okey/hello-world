@@ -1,0 +1,40 @@
+@import './colors.scss';
+
+header {
+	padding: 1rem 2.5rem;
+	background: $background2;
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.logo {
+			font-size: 2rem;
+			font-family: 'Orbitron', sans-serif;
+			font-weight: 600;
+			user-select: none;
+		}
+
+		button {
+			background: gray;
+			border-radius: 5px;
+			padding: .5rem 2rem;
+			border: none;
+			cursor: pointer;
+			user-select: none;
+
+			a {
+				font-size: 1.2rem;
+				font-family: 'Orbitron', sans-serif;
+				font-weight: 600;
+			}
+
+			&:hover {
+				background: $background;
+				transition: .3s;
+
+			}
+		}
+	}
+}

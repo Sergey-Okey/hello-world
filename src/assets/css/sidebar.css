@@ -1,0 +1,21 @@
+.sidebar {
+  position: absolute;
+  display: flex;
+  padding-top: 1rem;
+  width: 200px;
+  flex-direction: column;
+}
+.sidebar span {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-left: 5px;
+}
+.sidebar span:hover {
+  background: #3a3939;
+  transition: 0.3s;
+}
+.sidebar a {
+  font-size: 1.2rem;
+}/*# sourceMappingURL=sidebar.css.map */

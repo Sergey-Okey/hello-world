@@ -1,0 +1,36 @@
+header {
+  padding: 1rem 2.5rem;
+  background: #3a3939;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo {
+  font-size: 2rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+header nav button {
+  background: gray;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+header nav button a {
+  font-size: 1.2rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+}
+header nav button:hover {
+  background: #242424;
+  transition: 0.3s;
+}/*# sourceMappingURL=header.css.map */
