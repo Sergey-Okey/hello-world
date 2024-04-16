@@ -15,9 +15,14 @@ body {
 	width: 100%;
 	line-height: 1.5;
 	font-size: 16px;
-	text-indent: 2em;
 	background: $background;
 	font-family: "Poppins", sans-serif;
 	font-style: normal;
 	color: $text;
+	overflow-x: hidden;
+}
+
+.home {
+	padding-left: 15%;
+	padding-top: 100px;
 }

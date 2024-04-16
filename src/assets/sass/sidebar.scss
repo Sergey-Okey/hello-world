@@ -1,21 +1,26 @@
 @import './colors.scss';
 
 .sidebar {
-	position: absolute;
-	display: flex;
-	padding-top: 1rem;
-	width: 200px;
+	position: fixed;
+	margin-top: 80px;
+	width: 250px;
 	flex-direction: column;
+	background: $background2;
+	border-right: solid 1px rgba(255, 255, 255, 0.219);
+	height: 95%;
+	padding: 1rem 0;
 
 	span {
 		display: flex;
 		align-items: center;
 		border-radius: 5px;
-		padding: .5rem 1rem;
-		margin-left: 5px;
+		padding: .5rem 1.2rem;
+		margin: 0 10px;
+		user-select: none;
+		gap: 1rem;
 
 		&:hover {
-			background: $background2;
+			background: $background;
 			transition: .3s;
 		}
 	}

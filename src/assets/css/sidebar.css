@@ -1,19 +1,26 @@
 .sidebar {
-  position: absolute;
-  display: flex;
-  padding-top: 1rem;
-  width: 200px;
+  position: fixed;
+  margin-top: 80px;
+  width: 250px;
   flex-direction: column;
+  background: #3a3939;
+  border-right: solid 1px rgba(255, 255, 255, 0.219);
+  height: 95%;
+  padding: 1rem 0;
 }
 .sidebar span {
   display: flex;
   align-items: center;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
-  margin-left: 5px;
+  padding: 0.5rem 1.2rem;
+  margin: 0 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  gap: 1rem;
 }
 .sidebar span:hover {
-  background: #3a3939;
+  background: #242424;
   transition: 0.3s;
 }
 .sidebar a {
