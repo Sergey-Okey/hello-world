@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import '../assets/css/sidebar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons'
@@ -11,12 +12,24 @@ import { faHashtag } from '@fortawesome/free-solid-svg-icons'
 export default function Siderbar() {
 	return (
 		<div className="sidebar">
-			<span><FontAwesomeIcon icon={faArrowTrendUp} /><Link to="/" >Популярное</Link></span>
-			<span><FontAwesomeIcon icon={faMugHot} /><Link to="/">Свежее</Link></span>
-			<span><FontAwesomeIcon icon={faBriefcase} /><Link to="/">Вакансии</Link></span>
-			<span><FontAwesomeIcon icon={faPaperPlane} /><Link to="/">Каналы</Link></span>
-			<span><FontAwesomeIcon icon={faBookmark} /><Link to="/">Сохраненные</Link></span>
-			<span><FontAwesomeIcon icon={faHashtag} /><Link to="/">Темы</Link></span>
+			<Link to="/pages/Popular.jsx" >
+				<FontAwesomeIcon icon={faArrowTrendUp} /> Популярное
+			</Link>
+			<Link to="/pages/Fresh.jsx">
+				<FontAwesomeIcon icon={faMugHot} /> Свежее
+			</Link>
+			<Link to="/pages/Jobs.jsx">
+				<FontAwesomeIcon icon={faBriefcase} /> Вакансии
+			</Link>
+			<Link to="/pages/Channels.jsx">
+				<FontAwesomeIcon icon={faPaperPlane} /> Каналы
+			</Link>
+			<Link to="/pages/Saved.jsx">
+				<FontAwesomeIcon icon={faBookmark} /> Сохраненные
+			</Link>
+			<Link to="/pages/Topics.jsx">
+				<FontAwesomeIcon icon={faHashtag} /> Темы
+			</Link>
 		</div>
 	)
 }

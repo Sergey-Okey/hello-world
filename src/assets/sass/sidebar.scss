@@ -2,21 +2,25 @@
 
 .sidebar {
 	position: fixed;
+	top: 5px;
 	margin-top: 80px;
 	width: 250px;
 	flex-direction: column;
 	background: $background2;
-	border-right: solid 1px rgba(255, 255, 255, 0.219);
+	border: solid 1px rgba(255, 255, 255, 0.219);
 	height: 95%;
 	padding: 1rem 0;
+	display: flex;
+	gap: 1rem;
 
-	span {
-		display: flex;
-		align-items: center;
+	a {
+		font-size: 1.2rem;
 		border-radius: 5px;
 		padding: .5rem 1.2rem;
 		margin: 0 10px;
 		user-select: none;
+		display: flex;
+		align-items: center;
 		gap: 1rem;
 
 		&:hover {
@@ -25,7 +29,7 @@
 		}
 	}
 
-	a {
-		font-size: 1.2rem;
+	a.active {
+		background: $background;
 	}
 }

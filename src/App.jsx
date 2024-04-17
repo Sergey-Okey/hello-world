@@ -1,15 +1,27 @@
 import './assets/css/style.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Popular from './pages/Popular'
+import Jobs from './pages/Jobs'
+import Channels from './pages/Channels'
+import Topics from './pages/Topics'
+import Saved from './pages/Saved'
+import Fresh from './pages/Fresh'
+
 export default function App() {
 
   return (
     <Router>
       <Header />
-      <div className="home">
-        <h1>Hello</h1>
-      </div>
+      <Routes>
+        <Route path="/pages/Popular.jsx" element={<Popular />} />
+        <Route path="/pages/Jobs.jsx" element={<Jobs />} />
+        <Route path="/pages/Channels.jsx" element={<Channels />} />
+        <Route path="/pages/Saved.jsx" element={<Saved />} />
+        <Route path="/pages/Topics.jsx" element={<Topics />} />
+        <Route path="/pages/Fresh.jsx" element={<Fresh />} />
+      </Routes>
       <Footer />
     </Router>
   )
