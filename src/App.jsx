@@ -8,12 +8,14 @@ import Channels from './pages/Channels'
 import Topics from './pages/Topics'
 import Saved from './pages/Saved'
 import Fresh from './pages/Fresh'
+import Siderbar from './components/Sidebar'
 
 export default function App() {
 
   return (
     <Router>
       <Header />
+      <Siderbar />
       <Routes>
         <Route path="/pages/Popular.jsx" element={<Popular />} />
         <Route path="/pages/Jobs.jsx" element={<Jobs />} />

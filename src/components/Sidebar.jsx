@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
 import '../assets/css/sidebar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons'
