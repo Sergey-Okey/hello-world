@@ -23,8 +23,8 @@ header {
 		}
 
 		.logo {
-			width: 30px;
-			height: 30px;
+			width: 40px;
+			height: 40px;
 
 			img {
 				width: 100%;
@@ -53,4 +53,8 @@ header {
 			}
 		}
 	}
+}
+
+.modal-login {
+	position: absolute;
 }
