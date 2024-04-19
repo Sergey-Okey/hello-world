@@ -1,0 +1,48 @@
+@import './colors.scss';
+
+.modal {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: inherit;
+	backdrop-filter: blur(10px);
+}
+
+.modal-login {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: $background;
+	z-index: 3;
+	border-radius: 10px;
+	padding: 1rem;
+
+	.modal-title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+
+		span {
+			font-size: 2rem;
+		}
+
+		button {
+			padding: 0 .5rem;
+
+			&:hover {
+				color: rgb(240, 56, 56);
+			}
+		}
+	}
+
+	form {
+		input {
+			display: block;
+			margin-bottom: 1rem;
+			padding: .5rem;
+			border-radius: 5px;
+			border: 0;
+		}
+	}
+}

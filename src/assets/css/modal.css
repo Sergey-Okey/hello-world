@@ -1,0 +1,40 @@
+.modal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.modal-login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #242424;
+  z-index: 3;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.modal-login .modal-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.modal-login .modal-title span {
+  font-size: 2rem;
+}
+.modal-login .modal-title button {
+  padding: 0 0.5rem;
+}
+.modal-login .modal-title button:hover {
+  color: rgb(240, 56, 56);
+}
+.modal-login form input {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 0;
+}/*# sourceMappingURL=modal.css.map */

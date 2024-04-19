@@ -39,12 +39,10 @@ header {
 			border: none;
 			cursor: pointer;
 			user-select: none;
+			font-size: 1.2rem;
+			font-family: 'Orbitron', sans-serif;
+			font-weight: 600;
 
-			a {
-				font-size: 1.2rem;
-				font-family: 'Orbitron', sans-serif;
-				font-weight: 600;
-			}
 
 			&:hover {
 				background: $background;
@@ -55,6 +53,5 @@ header {
 	}
 }
 
-.modal-login {
-	position: absolute;
-}
+
+

@@ -38,8 +38,6 @@ header nav button {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-header nav button a {
   font-size: 1.2rem;
   font-family: "Orbitron", sans-serif;
   font-weight: 600;
@@ -47,8 +45,4 @@ header nav button a {
 header nav button:hover {
   background: #242424;
   transition: 0.3s;
-}
-
-.modal-login {
-  position: absolute;
 }/*# sourceMappingURL=header.css.map */
