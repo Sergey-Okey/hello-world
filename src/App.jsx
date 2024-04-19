@@ -16,6 +16,11 @@ export default function App() {
     <Router>
       <Header />
       <Siderbar />
+      <main>
+        <div className="container">
+          <h1>Главная</h1>
+        </div>
+      </main>
       <Routes>
         <Route path="/pages/Popular.jsx" element={<Popular />} />
         <Route path="/pages/Jobs.jsx" element={<Jobs />} />
