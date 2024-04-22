@@ -1,9 +1,20 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import { useState } from 'react';
+import '../assets/css/header.css'
+import Logo from '../assets/images/logo.svg'
+import { Modal } from './Modal'
 
-import '../assets/css/header.css';
-import Logo from '../assets/images/logo.svg';
+export default function Header() {
+	const [isModalOpen, setIsModalOpen] = useState(false);
 
-export default function Header(toggleModal) {
+	const openModal = () => {
+		setIsModalOpen(true);
+	};
+
+	const closeModal = () => {
+		setIsModalOpen(false);
+	};
+
 	return (
 		<>
 			<header>
@@ -12,7 +23,8 @@ export default function Header(toggleModal) {
 						<img src={Logo} alt="Logo" />
 					</div>
 					<Link to="/pages/Fresh.jsx"><span className='logo-text'>Hello World</span></Link>
-					<button onClick={toggleModal}>Login</button>
+					<button onClick={openModal}>Login</button>
+					<Modal isOpen={isModalOpen} onClose={closeModal} />
 				</nav>
 			</header>
 		</>

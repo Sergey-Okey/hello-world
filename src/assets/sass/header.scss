@@ -4,7 +4,7 @@ header {
 	width: 100%;
 	padding: 1rem 2rem;
 	background: $background2;
-	border-bottom: solid 1px rgba(255, 255, 255, 0.219);
+	border-bottom: solid 1px rgba(0, 0, 0, 0.24);
 	position: fixed;
 	top: 0;
 	z-index: 2;
@@ -33,7 +33,7 @@ header {
 		}
 
 		button {
-			background: gray;
+			background-color: #007bff;
 			border-radius: 5px;
 			padding: .5rem 2rem;
 			border: none;
@@ -45,13 +45,9 @@ header {
 
 
 			&:hover {
-				background: $background;
+				background-color: #0056b3;
 				transition: .3s;
-
 			}
 		}
 	}
 }
-
-
-

@@ -1,48 +1,74 @@
 @import './colors.scss';
 
 .modal {
-	position: absolute;
-	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
-	background: inherit;
-	backdrop-filter: blur(10px);
-}
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
 
-.modal-login {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	background: $background;
-	z-index: 3;
-	border-radius: 10px;
-	padding: 1rem;
+	.modal-content {
+		background: $background;
+		padding: 20px;
+		border-radius: 8px;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+		max-width: 400px;
+		width: 100%;
+		position: relative;
+	}
 
 	.modal-title {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 1rem;
+		cursor: pointer;
 
 		span {
 			font-size: 2rem;
-		}
-
-		button {
-			padding: 0 .5rem;
 
 			&:hover {
-				color: rgb(240, 56, 56);
+				color: red;
+				transition: .3s;
 			}
 		}
 	}
 
+
 	form {
-		input {
+		margin-top: 20px;
+
+		label {
 			display: block;
-			margin-bottom: 1rem;
-			padding: .5rem;
+			margin-bottom: 5px;
+		}
+
+		input {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
 			border-radius: 5px;
-			border: 0;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+
+		button {
+			width: 100%;
+			padding: 10px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+
+			&:hover {
+				background-color: #0056b3;
+			}
 		}
 	}
 }

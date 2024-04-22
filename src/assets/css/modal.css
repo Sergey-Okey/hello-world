@@ -1,40 +1,62 @@
 .modal {
-  position: absolute;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background: inherit;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
-
-.modal-login {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: #242424;
-  z-index: 3;
-  border-radius: 10px;
-  padding: 1rem;
+.modal .modal-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
 }
-.modal-login .modal-title {
+.modal .modal-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  cursor: pointer;
 }
-.modal-login .modal-title span {
+.modal .modal-title span {
   font-size: 2rem;
 }
-.modal-login .modal-title button {
-  padding: 0 0.5rem;
+.modal .modal-title span:hover {
+  color: red;
+  transition: 0.3s;
 }
-.modal-login .modal-title button:hover {
-  color: rgb(240, 56, 56);
+.modal form {
+  margin-top: 20px;
 }
-.modal-login form input {
+.modal form label {
   display: block;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
+  margin-bottom: 5px;
+}
+.modal form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
   border-radius: 5px;
-  border: 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.modal form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.modal form button:hover {
+  background-color: #0056b3;
 }/*# sourceMappingURL=modal.css.map */
