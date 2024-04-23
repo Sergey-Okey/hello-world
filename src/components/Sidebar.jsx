@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import '../assets/css/sidebar.css'
 import { useState } from 'react'
 import { FontAwesomeIcon, } from '@fortawesome/react-fontawesome'
-import { faArrowTrendUp, faMugHot, faBriefcase, faPaperPlane, faBookmark, faHashtag } from '@fortawesome/free-solid-svg-icons'
+import { faBolt, faMugHot, faBriefcase, faPaperPlane, faBookmark, faHashtag } from '@fortawesome/free-solid-svg-icons'
 
 export default function Siderbar() {
 	const [activeLink, setActiveLink] = useState(null);
@@ -14,7 +14,7 @@ export default function Siderbar() {
 	return (
 		<div className="sidebar">
 			<Link to="/pages/Popular.jsx" onClick={() => handleLinkClick('popular')} className={activeLink === 'popular' ? 'active' : ''}>
-				<FontAwesomeIcon icon={faArrowTrendUp} /> Популярное
+				<FontAwesomeIcon icon={faBolt} /> Популярное
 			</Link>
 			<Link to="/pages/Fresh.jsx" onClick={() => handleLinkClick('fresh')} className={activeLink === 'fresh' ? 'active' : ''}>
 				<FontAwesomeIcon icon={faMugHot} /> Свежее

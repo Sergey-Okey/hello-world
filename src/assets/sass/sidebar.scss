@@ -12,6 +12,12 @@
 	padding: 1rem 0;
 	display: flex;
 	gap: 1rem;
+	border-radius: 10px;
+
+
+	img {
+		color: #fff;
+	}
 
 	a {
 		font-size: 1.2rem;
@@ -23,9 +29,9 @@
 		align-items: center;
 		gap: 1rem;
 
+
 		&:hover {
 			background-color: #007bff;
-			transition: .3s;
 			color: $text;
 			color: #fff;
 		}
@@ -34,5 +40,8 @@
 	a.active {
 		background-color: #0056b3;
 		color: #fff;
+		transition: 0;
 	}
+
+
 }
