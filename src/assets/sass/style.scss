@@ -27,7 +27,6 @@
 
 body {
 	position: relative;
-	width: 100%;
 	line-height: 1.5;
 	font-size: 16px;
 	background: $background;
@@ -39,15 +38,15 @@ body {
 
 .container {
 	position: fixed;
-	overflow-y: scroll;
+	overflow-y: auto;
 	margin-top: 85px;
+	height: 100%;
 	top: 0;
 	right: 0;
 	left: 0;
 	margin-left: 255px;
-	height: 100vh;
 	background: $background2;
-	padding: 1rem;
+	padding: 1rem 10rem;
 	border: solid 1px rgba(0, 0, 0, 0.24);
 	border-radius: 10px;
 }

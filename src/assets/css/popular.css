@@ -3,6 +3,10 @@
   gap: 20px;
   flex-wrap: wrap;
 }
+.popular h2 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
 .popular p {
   font-size: 1rem;
 }
@@ -11,4 +15,5 @@
   background: #194075;
   padding: 1rem;
   border-radius: 10px;
+  cursor: pointer;
 }/*# sourceMappingURL=popular.css.map */
