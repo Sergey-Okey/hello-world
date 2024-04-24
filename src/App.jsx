@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import Popular from './pages/Popular';
 import Jobs from './pages/Jobs';
 import Channels from './pages/Channels';
 import Topics from './pages/Topics';
 import Saved from './pages/Saved';
 import Fresh from './pages/Fresh';
 import Profile from './pages/Profile';
+import Popular from './pages/Popular';
 
 export default function App() {
   return (

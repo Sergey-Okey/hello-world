@@ -40,7 +40,6 @@ export default function Popular() {
 						<div key={index} className='post-item'>
 							<h2>{post.title} {post.id}</h2>
 							<p>{post.body}</p>
-							<img src={post.img || 'https://via.placeholder.com/100%'} alt="Placeholder" />
 							<div className="post-info">
 								<div className="comment">
 									<span><FontAwesomeIcon icon={faThumbsUp} /> {post.likes}</span>
