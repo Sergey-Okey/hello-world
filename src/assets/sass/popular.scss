@@ -1,24 +1,47 @@
 @import './colors.scss';
 
-.popular {
-	display: flex;
-	gap: 20px;
-	flex-wrap: wrap;
+h2 {
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
 
-	h2 {
-		text-transform: uppercase;
-		margin-bottom: 1rem;
-	}
+p {
+	font-size: 1rem;
+	margin-bottom: 1.5rem;
+}
 
-	p {
-		font-size: 1rem;
-	}
+img {
+	margin-bottom: 2.5rem;
+}
 
-	.post-item {
-		width: 300px;
-		background: $background;
+.post-item {
+	position: relative;
+	padding: 1rem;
+	max-width: 300px;
+	background: $background;
+	border-radius: 10px;
+	cursor: pointer;
+
+	.post-info {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		gap: 1rem;
+		width: 100%;
+		display: flex;
 		padding: 1rem;
-		border-radius: 10px;
-		cursor: pointer;
+		justify-content: space-between;
+		align-items: center;
+
+		.comment {
+			display: flex;
+			gap: 1rem;
+		}
+
+		span {
+			text-wrap: nowrap;
+		}
 	}
+
+
 }

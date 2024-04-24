@@ -13,24 +13,27 @@ export default function Siderbar() {
 
 	return (
 		<div className="sidebar">
-			<Link to="/pages/Popular.jsx" onClick={() => handleLinkClick('popular')} className={activeLink === 'popular' ? 'active' : ''}>
-				<FontAwesomeIcon icon={faBolt} /> Популярное
-			</Link>
-			<Link to="/pages/Fresh.jsx" onClick={() => handleLinkClick('fresh')} className={activeLink === 'fresh' ? 'active' : ''}>
-				<FontAwesomeIcon icon={faMugHot} /> Свежее
-			</Link>
-			<Link to="/pages/Jobs.jsx" onClick={() => handleLinkClick('jobs')} className={activeLink === 'jobs' ? 'active' : ''}>
-				<FontAwesomeIcon icon={faBriefcase} /> Вакансии
-			</Link>
-			<Link to="/pages/Channels.jsx" onClick={() => handleLinkClick('channels')} className={activeLink === 'channels' ? 'active' : ''}>
-				<FontAwesomeIcon icon={faPaperPlane} /> Каналы
-			</Link>
-			<Link to="/pages/Saved.jsx" onClick={() => handleLinkClick('saved')} className={activeLink === 'saved' ? 'active' : ''}>
-				<FontAwesomeIcon icon={faBookmark} /> Сохраненные
-			</Link>
-			<Link to="/pages/Topics.jsx" onClick={() => handleLinkClick('topics')} className={activeLink === 'topics' ? 'active' : ''}>
-				<FontAwesomeIcon icon={faHashtag} /> Темы
-			</Link>
+			<div className="content">
+				<Link to="/pages/Popular.jsx" onClick={() => handleLinkClick('popular')} className={activeLink === 'popular' ? 'active' : ''}>
+					<FontAwesomeIcon icon={faBolt} /> Популярное
+				</Link>
+				<Link to="/pages/Fresh.jsx" onClick={() => handleLinkClick('fresh')} className={activeLink === 'fresh' ? 'active' : ''}>
+					<FontAwesomeIcon icon={faMugHot} /> Свежее
+				</Link>
+				<Link to="/pages/Jobs.jsx" onClick={() => handleLinkClick('jobs')} className={activeLink === 'jobs' ? 'active' : ''}>
+					<FontAwesomeIcon icon={faBriefcase} /> Вакансии
+				</Link>
+				<Link to="/pages/Channels.jsx" onClick={() => handleLinkClick('channels')} className={activeLink === 'channels' ? 'active' : ''}>
+					<FontAwesomeIcon icon={faPaperPlane} /> Каналы
+				</Link>
+				<Link to="/pages/Saved.jsx" onClick={() => handleLinkClick('saved')} className={activeLink === 'saved' ? 'active' : ''}>
+					<FontAwesomeIcon icon={faBookmark} /> Сохраненные
+				</Link>
+				<Link to="/pages/Topics.jsx" onClick={() => handleLinkClick('topics')} className={activeLink === 'topics' ? 'active' : ''}>
+					<FontAwesomeIcon icon={faHashtag} /> Темы
+				</Link>
+				<Link to='/pages/Profile.jsx'>Profile</Link>
+			</div>
 		</div>
 	)
 }

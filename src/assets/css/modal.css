@@ -27,12 +27,19 @@
   justify-content: space-between;
   cursor: pointer;
 }
+.modal .modal-title h2 {
+  margin: 0;
+}
 .modal .modal-title span {
   font-size: 2rem;
 }
 .modal .modal-title span:hover {
   color: red;
   transition: 0.3s;
+}
+.modal p {
+  color: gainsboro;
+  text-align: center;
 }
 .modal form {
   margin-top: 20px;
@@ -48,6 +55,8 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  color: #194075;
+  font-weight: 600;
 }
 .modal form button {
   width: 100%;
@@ -58,6 +67,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
 }
 .modal form button:hover {
   background-color: #0056b3;

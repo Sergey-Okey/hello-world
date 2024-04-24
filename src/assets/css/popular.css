@@ -1,19 +1,40 @@
-.popular {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.popular h2 {
+h2 {
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
-.popular p {
+
+p {
   font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
-.popular .post-item {
-  width: 300px;
-  background: #194075;
+
+img {
+  margin-bottom: 2.5rem;
+}
+
+.post-item {
+  position: relative;
   padding: 1rem;
+  max-width: 300px;
+  background: #194075;
   border-radius: 10px;
   cursor: pointer;
+}
+.post-item .post-info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  gap: 1rem;
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-item .post-info .comment {
+  display: flex;
+  gap: 1rem;
+}
+.post-item .post-info span {
+  text-wrap: nowrap;
 }/*# sourceMappingURL=popular.css.map */

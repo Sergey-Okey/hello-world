@@ -29,6 +29,10 @@
 		justify-content: space-between;
 		cursor: pointer;
 
+		h2 {
+			margin: 0;
+		}
+
 		span {
 			font-size: 2rem;
 
@@ -39,6 +43,10 @@
 		}
 	}
 
+	p {
+		color: gainsboro;
+		text-align: center;
+	}
 
 	form {
 		margin-top: 20px;
@@ -55,6 +63,8 @@
 			border-radius: 5px;
 			border: 1px solid #ccc;
 			box-sizing: border-box;
+			color: $background;
+			font-weight: 600;
 		}
 
 		button {
@@ -66,6 +76,7 @@
 			border-radius: 5px;
 			cursor: pointer;
 			transition: background-color 0.3s ease;
+			margin-bottom: 1rem;
 
 			&:hover {
 				background-color: #0056b3;

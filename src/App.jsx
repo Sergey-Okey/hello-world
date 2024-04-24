@@ -1,34 +1,33 @@
-import './assets/css/style.css'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Popular from './pages/Popular'
-import Jobs from './pages/Jobs'
-import Channels from './pages/Channels'
-import Topics from './pages/Topics'
-import Saved from './pages/Saved'
-import Fresh from './pages/Fresh'
-import Siderbar from './components/Sidebar'
+import './assets/css/style.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import Popular from './pages/Popular';
+import Jobs from './pages/Jobs';
+import Channels from './pages/Channels';
+import Topics from './pages/Topics';
+import Saved from './pages/Saved';
+import Fresh from './pages/Fresh';
+import Profile from './pages/Profile';
 
 export default function App() {
-
   return (
-
     <Router>
       <Header />
-      <Siderbar />
+      <Sidebar />
       <main>
-        <div className="container">
-        </div>
+        <Routes>
+          <Route path="/" element={<Fresh />} />
+          <Route path="/pages/popular.jsx" element={<Popular />} />
+          <Route path="/pages/jobs.jsx" element={<Jobs />} />
+          <Route path="/pages/channels.jsx" element={<Channels />} />
+          <Route path="/pages/topics.jsx" element={<Topics />} />
+          <Route path="/pages/saved.jsx" element={<Saved />} />
+          <Route path="/pages/fresh.jsx" element={<Fresh />} />
+          <Route path="/pages/profile.jsx" element={<Profile />} />
+        </Routes>
       </main>
-      <Routes>
-        <Route export path="/pages/Popular.jsx" element={<Popular />} />
-        <Route path="/pages/Jobs.jsx" element={<Jobs />} />
-        <Route path="/pages/Channels.jsx" element={<Channels />} />
-        <Route path="/pages/Saved.jsx" element={<Saved />} />
-        <Route path="/pages/Topics.jsx" element={<Topics />} />
-        <Route path="/pages/Fresh.jsx" element={<Fresh />} />
-      </Routes>
       <Footer />
     </Router>
   )

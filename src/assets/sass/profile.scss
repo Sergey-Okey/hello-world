@@ -1,0 +1,15 @@
+@import './colors.scss';
+
+.content {
+	.avatar {
+		border-radius: 100px;
+		overflow: hidden;
+		width:150px;
+		height: 150px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
