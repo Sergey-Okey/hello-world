@@ -1,33 +1,29 @@
-import '../assets/css/popular.css'
-import { useEffect, useState } from 'react'
-import { fetchRandomPosts } from '../components/api'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faThumbsUp, faComment, faEye } from '@fortawesome/free-solid-svg-icons'
-import LoadingIndicator from '../components/LoadingIndicator'
+import '../assets/css/popular.css';
+import { useEffect, useState } from 'react';
+import { getPosts } from '../components/api';
+import LoadingIndicator from '../components/LoadingIndicator';
 
 export default function Popular() {
-	const [randomPosts, setRandomPosts] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [posts, setPosts] = useState([]);
 
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const posts = [];
-				for (let i = 0; i < 10; i++) {
-					const post = await fetchRandomPosts()
-					post.likes = Math.floor(Math.random() * 1000)
-					post.comments = Math.floor(Math.random() * 1000)
-					post.views = Math.floor(Math.random() * 10000)
-					posts.push(post)
+				const response = await getPosts();
+				console.log('Response from API:', response);
+				if (response && response.data) {
+					setPosts(response.data);
+					setLoading(false);
+				} else {
+					console.error('Отсутствует ожидаемое свойство "data" в ответе:', response);
 				}
-				setRandomPosts(posts)
-				setLoading(false)
 			} catch (error) {
-				console.error('Ошибка при получении случайных постов:', error)
+				console.error('Ошибка при получении постов:', error);
 			}
 		};
 
-		fetchData()
+		fetchData();
 	}, []);
 
 	return (
@@ -36,23 +32,23 @@ export default function Popular() {
 				{loading ? (
 					<LoadingIndicator />
 				) : (
-					randomPosts.map((post, index) => (
-						<div key={index} className='post-item'>
-							<h2>{post.title} {post.id}</h2>
-							<p>{post.body}</p>
-							<div className="post-info">
-								<div className="comment">
-									<span><FontAwesomeIcon icon={faThumbsUp} /> {post.likes}</span>
-									<span><FontAwesomeIcon icon={faComment} /> {post.comments}</span>
-								</div>
-								<div className="views">
-									<span><FontAwesomeIcon icon={faEye} /> {post.views}</span>
+					Array.isArray(posts) && posts.length > 0 ? (
+						posts.map((post) => (
+							<div className="posts">
+								<div className='post-item'>
+									<div className="post-title">
+										<h2>{post.attributes.Title}</h2>
+										<span>{post.attributes.Date}</span>
+									</div>
+									<p>{post.attributes.Content}</p>
 								</div>
 							</div>
-						</div>
-					))
+						))
+					) : (
+						<p>Данные не получены или отсутствуют</p>
+					)
 				)}
 			</div>
 		</div>
-	)
+	);
 }

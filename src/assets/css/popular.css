@@ -15,26 +15,8 @@ img {
 .post-item {
   position: relative;
   padding: 1rem;
-  max-width: 300px;
+  max-width: 350px;
   background: #194075;
   border-radius: 10px;
   cursor: pointer;
-}
-.post-item .post-info {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  gap: 1rem;
-  width: 100%;
-  display: flex;
-  padding: 1rem;
-  justify-content: space-between;
-  align-items: center;
-}
-.post-item .post-info .comment {
-  display: flex;
-  gap: 1rem;
-}
-.post-item .post-info span {
-  text-wrap: nowrap;
 }/*# sourceMappingURL=popular.css.map */

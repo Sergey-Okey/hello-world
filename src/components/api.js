@@ -1,15 +1,13 @@
-export const fetchRandomPosts = async () => {
+export const getPosts = async () => {
 	try {
-		const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+		const response = await fetch('https://thankful-cactus-ecfa1b2c2c.strapiapp.com/api/posts');
 		if (!response.ok) {
-			throw new Error('Ошибка при загрузке постов')
+			throw new Error('Ошибка при загрузке постов');
 		}
-		const allPosts = await response.json()
-		const randomIndex = Math.floor(Math.random() * allPosts.length)
-		const randomPost = allPosts[randomIndex]
-		return randomPost
+		const data = await response.json();
+		return data;
 	} catch (error) {
-		console.error('Ошибка при получении постов:', error)
-		return null
+		console.error('Ошибка при получении постов:', error);
+		return { data: [] };
 	}
-}
+};

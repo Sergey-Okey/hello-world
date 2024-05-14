@@ -17,31 +17,8 @@ img {
 .post-item {
 	position: relative;
 	padding: 1rem;
-	max-width: 300px;
+	max-width: 350px;
 	background: $background;
 	border-radius: 10px;
 	cursor: pointer;
-
-	.post-info {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		gap: 1rem;
-		width: 100%;
-		display: flex;
-		padding: 1rem;
-		justify-content: space-between;
-		align-items: center;
-
-		.comment {
-			display: flex;
-			gap: 1rem;
-		}
-
-		span {
-			text-wrap: nowrap;
-		}
-	}
-
-
 }
