@@ -1,0 +1,29 @@
+h2 {
+	text-transform: unset;
+	margin-bottom: 1rem;
+}
+
+p {
+	font-size: 1rem;
+	margin-bottom: 2rem;
+}
+
+.posts {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-auto-rows: minmax(min-content, max-content);
+	gap: 1rem;
+}
+
+.post-item {
+	background: $background;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 1rem;
+}
+
+.post-item img {
+	max-width: 100%;
+	border-radius: 10px;
+	height: auto;
+}

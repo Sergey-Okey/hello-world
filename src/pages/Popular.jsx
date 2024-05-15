@@ -1,5 +1,5 @@
+import React, { useEffect, useState } from 'react';
 import '../assets/css/popular.css';
-import { useEffect, useState } from 'react';
 import { getPosts } from '../components/api';
 import LoadingIndicator from '../components/LoadingIndicator';
 
@@ -33,22 +33,24 @@ export default function Popular() {
 					<LoadingIndicator />
 				) : (
 					Array.isArray(posts) && posts.length > 0 ? (
-						posts.map((post) => (
-							<div className="posts">
-								<div className='post-item'>
+						<div className="posts">
+							{posts.map((post, index) => (
+								<div className="post-item" key={index}>
 									<div className="post-title">
 										<h2>{post.attributes.Title}</h2>
 										<span>{post.attributes.Date}</span>
 									</div>
 									<p>{post.attributes.Content}</p>
+									<img src={post.media} alt={post.id} />
 								</div>
-							</div>
-						))
+							))}
+						</div>
 					) : (
 						<p>Данные не получены или отсутствуют</p>
 					)
 				)}
 			</div>
 		</div>
+
 	);
 }
