@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../assets/css/popular.css';
 import { getPosts } from '../components/api';
 import LoadingIndicator from '../components/LoadingIndicator';
